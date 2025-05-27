@@ -1,0 +1,232 @@
+/* تنظیمات کلی */
+* {
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e7ff;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #000814 0%, #001f3f 100%);
+  min-height: 100vh;
+  padding: 20px 10px;
+  direction: rtl;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 30px;
+  background-color: #002366;
+  box-shadow: 0 0 15px #00bfff88;
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: #00bfff;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.logo {
+  cursor: default;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00d4ff;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.games-section h2 {
+  color: #00bfff;
+  margin-bottom: 30px;
+  font-weight: 800;
+  border-bottom: 3px solid #00bfff;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* کارت بازی */
+.game-card {
+  background: #12192a;
+  border-radius: 14px;
+  box-shadow: 0 0 20px #00bfffaa;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #00d4ffcc;
+}
+
+.game-image {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+}
+
+.game-image img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.game-card:hover .game-image img {
+  transform: scale(1.05);
+}
+
+.game-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-content h3 {
+  color: #00e5ff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.game-content p {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.system-req {
+  font-size: 0.95rem;
+  color: #77c9f1;
+  margin-bottom: 20px;
+  border-top: 1px solid #00bfff44;
+  padding-top: 10px;
+}
+
+.download-link {
+  align-self: center;
+  background-color: #00bfff;
+  color: #001f3f;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+  background-color: #00d4ff;
+}
+
+/* مودال */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #12192a;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  padding: 25px;
+  color: #e0e7ff;
+  position: relative;
+  box-shadow: 0 0 30px #00bfffcc;
+  text-align: right;
+  direction: rtl;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  color: #00e5ff;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+.modal-download-btn {
+  display: inline-block;
+  background-color: #00bfff;
+  color: #001f3f;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.modal-download-btn:hover {
+  background-color: #00d4ff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 28px;
+  color: #00bfff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #00d4ff;
+}
